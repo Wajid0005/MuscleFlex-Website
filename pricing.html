@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing & Memberships | MUSCLE FLEX | MK Fitness</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+            align-items: center;
+        }
+
+        .pricing-card {
+            background-color: var(--bg-secondary);
+            padding: 40px;
+            border-radius: 4px;
+            border: 1px solid #222;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-orange);
+        }
+
+        .pricing-card.recommended {
+            background-color: var(--accent-orange);
+            border-color: var(--accent-orange);
+            padding: 60px 40px;
+            z-index: 10;
+        }
+
+        .price-wrapper {
+            display: flex;
+            align-items: baseline;
+            margin: 20px 0 30px;
+        }
+
+        .currency {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-muted);
+        }
+
+        .recommended .currency {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .price {
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1;
+            color: var(--text-white);
+            margin: 0 10px;
+        }
+
+        .duration {
+            font-size: 16px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .recommended .duration {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .features-list li {
+            margin-bottom: 15px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .features-list i {
+            color: var(--accent-orange);
+            font-size: 14px;
+        }
+
+        .recommended .features-list i {
+            color: #fff;
+        }
+
+        .ribbon {
+            position: absolute;
+            top: 20px;
+            right: -40px;
+            background: #fff;
+            color: var(--accent-orange);
+            padding: 5px 40px;
+            font-weight: 800;
+            font-size: 12px;
+            text-transform: uppercase;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+<body class="bg-primary">
+
+    <header>
+        <div class="container logo-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-dumbbell"></i>
+                MUSCLE FLEX
+            </a>
+        </div>
+    </header>
+    <div class="main-nav">
+        <div class="container" style="position: relative;">
+            <button class="nav-scroll-btn scroll-left"><i class="fas fa-chevron-left"></i></button>
+            <div class="nav-scroll-container">
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="trainers.html">Team</a>
+                    <a href="gallery.html">Facility</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="testimonials.html">Reviews</a>
+                    <a href="contact.html" class="btn"
+                        style="padding: 10px 20px; font-size: 12px; margin-left: 15px;">Join Now</a>
+                </nav>
+            </div>
+            <button class="nav-scroll-btn scroll-right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <div style="height: 120px;"></div>
+
+    <section class="section-padding section-relative clip-bottom-right">
+        <div class="ghost-text" style="font-size: clamp(80px, 15vw, 200px);">MEMBERSHIP</div>
+
+        <div class="container section-relative text-center fade-in-section">
+            <h2 class="section-title">CHOOSE YOUR
+                <br><span class="text-orange">COMMITMENT</span>
+            </h2>
+            <p style="max-width: 600px; margin: 0 auto; color: var(--text-muted); font-size: 18px;">
+                No hidden fees. Just results. Join the finest bodybuilding and fitness community in Kamarhati.
+            </p>
+
+            <div class="pricing-grid">
+
+                <!-- Admission + Monthly -->
+                <div class="pricing-card fade-in-section delay-1">
+                    <h3 style="font-size: 24px;">ADMISSION + 1 MONTH</h3>
+                    <div class="price-wrapper" style="justify-content: center;">
+                        <span class="currency">?</span>
+                        <span class="price">1299</span>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Full gym access</li>
+                        <li><i class="fas fa-check"></i> Basic floor guidance</li>
+                        <li><i class="fas fa-check"></i> Locker access</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline" style="width: 100%;">JOIN NOW</a>
+                </div>
+
+                <!-- 4 Months -->
+                <div class="pricing-card fade-in-section delay-2">
+                    <h3 style="font-size: 24px;">4 MONTHS</h3>
+                    <div class="price-wrapper" style="justify-content: center;">
+                        <span class="currency">?</span>
+                        <span class="price">2499</span>
+                        <span class="duration">/ 4 MO</span>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Full gym access</li>
+                        <li><i class="fas fa-check"></i> Basic floor guidance</li>
+                        <li><i class="fas fa-check"></i> Locker access</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline" style="width: 100%;">JOIN NOW</a>
+                </div>
+
+                <!-- 6 Months -->
+                <div class="pricing-card recommended fade-in-section delay-3">
+                    <div class="ribbon">POPULAR</div>
+                    <h3 style="font-size: 24px;">6 MONTHS</h3>
+                    <div class="price-wrapper" style="justify-content: center;">
+                        <span class="currency">?</span>
+                        <span class="price">3599</span>
+                        <span class="duration">/ 6 MO</span>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Full gym access</li>
+                        <li><i class="fas fa-check"></i> Basic floor guidance</li>
+                        <li><i class="fas fa-check"></i> Locker access</li>
+                    </ul>
+                    <a href="contact.html" class="btn"
+                        style="background: white; color: var(--accent-orange); width: 100%;">JOIN NOW</a>
+                </div>
+
+                <!-- 12 Months -->
+                <div class="pricing-card recommended fade-in-section delay-4">
+                    <div class="ribbon">BEST VALUE</div>
+                    <h3 style="font-size: 24px;">12 MONTHS</h3>
+                    <div class="price-wrapper" style="justify-content: center;">
+                        <span class="currency">?</span>
+                        <span class="price">5499</span>
+                        <span class="duration">/ YEAR</span>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Full gym access</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> Locker & Shower</li>
+                        <li><i class="fas fa-check"></i> 1 Free PT Session</li>
+                    </ul>
+                    <a href="contact.html" class="btn"
+                        style="background: white; color: var(--accent-orange); width: 100%;">JOIN NOW</a>
+                </div>
+
+            </div>
+
+            <!-- Notes Section -->
+            <div style="margin-top: 60px; padding: 30px; border: 1px dashed #333; text-align: left;"
+                class="fade-in-section">
+                <h4 style="color: var(--text-white); margin-bottom: 10px;">ADDITIONAL SERVICES</h4>
+                <p style="color: var(--text-muted); font-size: 14px;">
+                    <strong class="text-orange">Personal Training & Diet Plans:</strong>
+                    Customised personal training and nutrition packages by Kamran Khan and Tanweer Alam are available.
+                    Fees for these services are completely tailored to your individual goals and requirements. Please
+                    contact us directly to discuss your transformation plan.
+                </p>
+        </div>
+        </div>
+    </section>
+
+    <footer style="margin-top: 50px;">
+        <div class="container text-center">
+            <p style="color: var(--text-muted); font-size: 14px;">&copy; 2026 MUSCLE FLEX / MK Fitness.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/917980581070" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+    <script src="script.js"></script>
+</body>
+
+</html>
+

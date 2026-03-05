@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Facility | MUSCLE FLEX | MK Fitness</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid var(--text-muted);
+            color: var(--text-muted);
+            padding: 8px 20px;
+            border-radius: 2px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            border-color: var(--accent-orange);
+            color: var(--text-white);
+            background: rgba(211, 84, 0, 0.1);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 2px;
+            aspect-ratio: 4/3;
+            background-color: var(--bg-tertiary);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            filter: brightness(0.8);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+            filter: brightness(1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            padding: 30px 20px 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-darker">
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container logo-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-dumbbell"></i>
+                MUSCLE FLEX
+            </a>
+        </div>
+    </header>
+    <div class="main-nav">
+        <div class="container" style="position: relative;">
+            <button class="nav-scroll-btn scroll-left"><i class="fas fa-chevron-left"></i></button>
+            <div class="nav-scroll-container">
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="trainers.html">Team</a>
+                    <a href="gallery.html">Facility</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="testimonials.html">Reviews</a>
+                    <a href="contact.html" class="btn" style="padding: 10px 20px; font-size: 12px; margin-left: 15px;">Join Now</a>
+                </nav>
+            </div>
+            <button class="nav-scroll-btn scroll-right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <div style="height: 120px;"></div>
+
+    <section class="section-padding section-relative clip-top-left clip-bottom-right bg-primary">
+        <div class="ghost-text">FACILITY</div>
+
+        <div class="container section-relative text-center fade-in-section">
+            <h2 class="section-title">THE
+                <br><span class="text-orange">FORGE</span>
+            </h2>
+            <p style="max-width: 600px; margin: 0 auto 40px; color: var(--text-muted); font-size: 18px;">
+                Premium equipment. Raw atmosphere. Designed for those who take their training seriously.
+            </p>
+
+            <!-- Simple JS filter simulation for styling purposes -->
+            <div class="gallery-filters">
+                <button class="filter-btn active">ALL</button>
+                <button class="filter-btn">EQUIPMENT</button>
+                <button class="filter-btn">TRAINING</button>
+                <button class="filter-btn">COMMUNITY</button>
+            </div>
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item fade-in-section delay-1">
+                    <img src="assets/images/gym_floor_1772697605695.png" alt="Gym Floor">
+                    <div class="gallery-overlay">
+                        <h4 style="font-size: 18px; margin: 0;">MAIN FLOOR</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in-section delay-2">
+                    <img src="assets/images/services_1_1772697558435.png" alt="Heavy Lifting">
+                    <div class="gallery-overlay">
+                        <h4 style="font-size: 18px; margin: 0;">FREE WEIGHTS</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in-section delay-3">
+                    <img src="assets/images/group_class_1772697622822.png" alt="Group Training">
+                    <div class="gallery-overlay">
+                        <h4 style="font-size: 18px; margin: 0;">GROUP SESH</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in-section delay-1">
+                    <img src="assets/images/services_2_1772697575385.png" alt="Mobility Area">
+                    <div class="gallery-overlay">
+                        <h4 style="font-size: 18px; margin: 0;">MOBILITY ZONE</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in-section delay-2">
+                    <!-- using hero image as generic gym shot -->
+                    <img src="assets/images/hero_bg_1772697426117.png" alt="Cardio">
+                    <div class="gallery-overlay">
+                        <h4 style="font-size: 18px; margin: 0;">CARDIO DECK</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in-section delay-3">
+                    <div
+                        style="width: 100%; height: 100%; background: #111; display:flex; align-items:center; justify-content:center;">
+                        <i class="fas fa-camera text-orange" style="font-size: 40px; opacity: 0.5;"></i>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4 style="font-size: 18px; margin: 0;">MORE COMING SOON</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Summary -->
+    <footer style="margin-top: -50px; position:relative; z-index:-1; padding-top: 100px;">
+        <div class="container text-center">
+            <p style="color: var(--text-muted); font-size: 14px;">&copy; 2026 MUSCLE FLEX / MK Fitness. Designed with
+                absolute discipline.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/917980581070" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+    <script src="script.js"></script>
+    <script>
+        // Simple filter toggle visuals
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Location | MUSCLE FLEX | MK Fitness</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 50px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-white);
+            font-family: inherit;
+            font-size: 16px;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-orange);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 15px;
+        }
+
+        select.form-control option {
+            background-color: var(--bg-secondary);
+            color: var(--text-white);
+        }
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            background-color: #222;
+        }
+
+        .info-card {
+            background: var(--bg-tertiary);
+            padding: 30px;
+            margin-top: 30px;
+            border-left: 4px solid var(--accent-orange);
+            text-align: left;
+        }
+
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-primary">
+
+    <header>
+        <div class="container logo-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-dumbbell"></i>
+                MUSCLE FLEX
+            </a>
+        </div>
+    </header>
+    <div class="main-nav">
+        <div class="container" style="position: relative;">
+            <button class="nav-scroll-btn scroll-left"><i class="fas fa-chevron-left"></i></button>
+            <div class="nav-scroll-container">
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="trainers.html">Team</a>
+                    <a href="gallery.html">Facility</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="testimonials.html">Reviews</a>
+                    <a href="contact.html" class="btn" style="padding: 10px 20px; font-size: 12px; margin-left: 15px;">Join Now</a>
+                </nav>
+            </div>
+            <button class="nav-scroll-btn scroll-right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <div style="height: 120px;"></div>
+
+    <section class="section-padding section-relative clip-bottom-right">
+        <div class="ghost-text">CONTACT</div>
+
+        <div class="container section-relative text-center fade-in-section">
+            <h2 class="section-title">GET IN
+                <br><span class="text-orange">TOUCH</span>
+            </h2>
+
+            <div class="contact-grid">
+
+                <!-- Contact Form -->
+                <div class="fade-in-section delay-1">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" required placeholder="Enter your full name"
+                                id="contactName">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Email Address (Optional)</label>`r`n                            <input type="email" class="form-control" placeholder="Enter your email" id="contactEmail">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Phone Number</label>`r`n                            <input type="tel" class="form-control" required placeholder="Enter your phone number" id="contactPhone">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">I'm Interested In</label>
+                            <select class="form-control" required id="contactInterest">
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="membership">General Membership</option>
+                                <option value="pt">Personal Training</option>
+                                <option value="nutrition">Nutrition / Diet Plan</option>
+                                <option value="competition">Competition Prep</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" rows="5" required placeholder="How can MK Fitness help you achieve your goals?" id="contactMessage"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn" style="width: 100%;">SEND MESSAGE</button>
+                    </form>
+                </div>
+
+                <!-- Map and Info -->
+                <div class="fade-in-section delay-2">
+                    <div class="map-container">
+                        <!-- Setting map to Kamarhati coords as requested via generic query -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14728.841052136056!2d88.36868112836254!3d22.6685810058987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89d3d4b656da1%3A0x6a2cdea8dd683dbd!2sKamarhati%2C%20Kolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                            width="100%" height="100%" style="border:0; filter: grayscale(100%) invert(90%);"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <div class="info-card">
+                        <div style="margin-bottom: 20px;">
+                            <h4
+                                style="color: var(--text-white); display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                                <i class="fas fa-map-marker-alt text-orange"></i> THE FORGE
+                            </h4>
+                            <p style="color: var(--text-light); line-height: 1.6;">
+                                5/1, SK. Muslim Rd, Kamarhati<br>
+                                Agarpara, Kolkata, West Bengal<br>
+                                700058
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4
+                                style="color: var(--text-white); display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                                <i class="fas fa-clock text-orange"></i> HOURS OF OPERATION
+                            </h4>
+                            <p style="color: var(--text-light); line-height: 1.6;">
+                                <strong style="color: var(--text-white);">Monday - Sunday:</strong> 5:00 AM - 12:00
+                                AM<br>
+                                Always open for those dedicated to the grind.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 style="font-weight: 900;"><i class="fas fa-dumbbell text-orange"></i> MUSCLE FLEX</h3>
+                    <p>Also known as MK Fitness. Founded by Kamran Khan and Tanweer Alam from Kamarhati.</p>
+                    <div class="social-icons" style="margin-top: 20px;">
+                        <a href="https://www.instagram.com/mk_fitness231/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/p/DUtfgLCE4Ok/" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 style="color: var(--text-white); font-weight: 700;">NAVIGATION</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="trainers.html">The Team</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 style="color: var(--text-white); font-weight: 700;">CONTACT</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt text-orange"></i> 5/1, SK. Muslim Rd, Kamarhati, Agarpara...
+                        </li>
+                        <li><i class="fas fa-clock text-orange"></i> 5:00 AM - 12:00 AM</li>
+                        <li><i class="fab fa-whatsapp text-orange"></i> +91 79805 81070</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 MUSCLE FLEX / MK Fitness. All Rights Reserved.</p>
+                <p>Designed with absolute discipline.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/917980581070" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+

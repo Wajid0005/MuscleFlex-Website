@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Reviews | MUSCLE FLEX | MK Fitness</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .testimonial-card {
+            background: rgba(20, 20, 20, 0.8);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 4px;
+            text-align: left;
+            position: relative;
+            z-index: 10;
+        }
+
+        .avatar-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-orange);
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .stars {
+            color: #FFD700;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 60px;
+            color: rgba(211, 84, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-primary">
+
+    <header>
+        <div class="container logo-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-dumbbell"></i>
+                MUSCLE FLEX
+            </a>
+        </div>
+    </header>
+    <div class="main-nav">
+        <div class="container" style="position: relative;">
+            <button class="nav-scroll-btn scroll-left"><i class="fas fa-chevron-left"></i></button>
+            <div class="nav-scroll-container">
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="trainers.html">Team</a>
+                    <a href="gallery.html">Facility</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="testimonials.html">Reviews</a>
+                    <a href="contact.html" class="btn" style="padding: 10px 20px; font-size: 12px; margin-left: 15px;">Join Now</a>
+                </nav>
+            </div>
+            <button class="nav-scroll-btn scroll-right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <div style="height: 120px;"></div>
+
+    <section class="section-padding section-relative clip-both"
+        style="background: url('assets/images/testimonials_bg_1772697662527.png') center/cover no-repeat; min-height: 80vh; display: flex; align-items: center;">
+        <div
+            style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(180deg, rgba(10,10,10,0.9) 0%, rgba(10,10,10,0.4) 50%, rgba(10,10,10,0.9) 100%);">
+        </div>
+        <div class="ghost-text" style="z-index: 1;">REVIEWS</div>
+
+        <div class="container section-relative text-center fade-in-section">
+            <h2 class="section-title">THE
+                <br><span class="text-orange">BROTHERHOOD</span>
+            </h2>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; margin-top: 60px;">
+
+                <!-- Review 1 -->
+                <div class="testimonial-card fade-in-section delay-1" style="transform: translateY(20px);">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <img src="assets/images/avatar_pradyut_1772697678929.png" alt="Pradyut" class="avatar-img">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="color: var(--text-light); font-size: 16px; margin-bottom: 25px; line-height: 1.8;">
+                        "The environment here is unlike any other gym. Kamran and Tanweer don't just instruct; they
+                        invest their time in your growth. It truly feels like a family."
+                    </p>
+                    <h4 style="font-size: 20px; text-transform: uppercase;">PRADYUT</h4>
+                    <span style="color: var(--accent-orange); font-size: 12px; font-weight: 700;">FITNESS
+                        LIFESTYLE</span>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="testimonial-card fade-in-section delay-2" style="transform: translateY(-20px);">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <img src="assets/images/avatar_avik_1772697696156.png" alt="Avik Dutta" class="avatar-img">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="color: var(--text-light); font-size: 16px; margin-bottom: 25px; line-height: 1.8;">
+                        "Strict discipline mixed with the best equipment in Kamarhati. If you're serious about
+                        transforming yourself, MK Fitness is the only place to be."
+                    </p>
+                    <h4 style="font-size: 20px; text-transform: uppercase;">AVIK DUTTA</h4>
+                    <span style="color: var(--accent-orange); font-size: 12px; font-weight: 700;">MUSCLE GAIN</span>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="testimonial-card fade-in-section delay-3" style="transform: translateY(20px);">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <img src="assets/images/avatar_riju_1772697713153.png" alt="Riju" class="avatar-img">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="color: var(--text-light); font-size: 16px; margin-bottom: 25px; line-height: 1.8;">
+                        "The raw, intense vibe gets you in the zone instantly. The trainers are always there to spot you
+                        and correct your form. Best decision I made."
+                    </p>
+                    <h4 style="font-size: 20px; text-transform: uppercase;">RIJU</h4>
+                    <span style="color: var(--accent-orange); font-size: 12px; font-weight: 700;">STRENGTH
+                        TRAINING</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer style="margin-top: 50px;">
+        <div class="container text-center">
+            <p style="color: var(--text-muted); font-size: 14px;">&copy; 2026 MUSCLE FLEX / MK Fitness.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/917980581070" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+

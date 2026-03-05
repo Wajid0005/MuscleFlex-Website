@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Team | MUSCLE FLEX | MK Fitness</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .trainer-card {
+            background-color: var(--bg-tertiary);
+            border-top: 4px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .trainer-card:hover {
+            border-top-color: var(--accent-orange);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .trainer-card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            object-position: top;
+            filter: grayscale(20%);
+            transition: filter 0.3s ease;
+        }
+
+        .trainer-card:hover img {
+            filter: grayscale(0%);
+        }
+
+        .trainer-info {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .specialty-tag {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--accent-orange);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body class="bg-primary">
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container logo-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-dumbbell"></i>
+                MUSCLE FLEX
+            </a>
+        </div>
+    </header>
+    <div class="main-nav">
+        <div class="container" style="position: relative;">
+            <button class="nav-scroll-btn scroll-left"><i class="fas fa-chevron-left"></i></button>
+            <div class="nav-scroll-container">
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="trainers.html">Team</a>
+                    <a href="gallery.html">Facility</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="testimonials.html">Reviews</a>
+                    <a href="contact.html" class="btn" style="padding: 10px 20px; font-size: 12px; margin-left: 15px;">Join Now</a>
+                </nav>
+            </div>
+            <button class="nav-scroll-btn scroll-right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!-- Page Header Area -->
+    <div style="height: 120px;"></div>
+
+    <!-- Trainers Section -->
+    <section class="section-padding section-relative clip-bottom-right" style="padding-top: 40px;">
+        <div class="ghost-text">TEAM</div>
+
+        <div class="container section-relative text-center fade-in-section">
+            <h2 class="section-title">MEET YOUR
+                <br><span class="text-orange">COACHES</span>
+            </h2>
+            <p style="max-width: 600px; margin: 0 auto 60px; color: var(--text-muted); font-size: 18px;">
+                The heart of MK Fitness. Expert guidance, absolute discipline, and a brotherhood that pushes you beyond
+                your limits.
+            </p>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; text-align: left;">
+
+                <!-- Coach 1 -->
+                <div class="trainer-card fade-in-section delay-1">
+                    <img src="assets/images/kamran_coach_1772697467216.png" alt="Kamran Khan">
+                    <div class="trainer-info">
+                        <span class="specialty-tag">HEAD COACH • PREP COACH</span>
+                        <h3 style="font-size: 32px; margin-bottom: 15px;">KAMRAN <br>KHAN</h3>
+                        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 30px; flex-grow: 1;">
+                            The visionary behind MK fitness. Specializing in complete body transformations and elite
+                            competition prep.
+                        </p>
+                        <a href="contact.html" class="btn" style="width: 100%; padding: 12px; font-size: 14px;">BOOK A
+                            SESSION</a>
+                    </div>
+                </div>
+
+                <!-- Coach 2 -->
+                <div class="trainer-card fade-in-section delay-2">
+                    <img src="assets/images/tanweer_coach_1772697493543.png" alt="Tanweer Alam">
+                    <div class="trainer-info">
+                        <span class="specialty-tag">FITNESS TRAINER • CHAMPION</span>
+                        <h3 style="font-size: 32px; margin-bottom: 15px;">TANWEER <br>ALAM</h3>
+                        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 30px; flex-grow: 1;">
+                            Mr. India (x2) and Mr. Bengal (x7). A living testament to discipline and raw power. Ready to
+                            train you to win.
+                        </p>
+                        <a href="contact.html" class="btn" style="width: 100%; padding: 12px; font-size: 14px;">BOOK A
+                            SESSION</a>
+                    </div>
+                </div>
+
+                <!-- Coach 3 Placeholder if needed, or keeping it to the 2 main guys -->
+                <!-- As user only provided 2 main owners, centering them might look better, 
+                     but standard 3 grid is requested. We use a generic 'Assistant Coach' for the 3rd slot -->
+                <div class="trainer-card fade-in-section delay-3">
+                    <div
+                        style="height: 400px; background-color: #050505; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #111;">
+                        <i class="fas fa-user-ninja" style="font-size: 60px; color: #333;"></i>
+                    </div>
+                    <div class="trainer-info">
+                        <span class="specialty-tag">ASSISTANT COACH</span>
+                        <h3 style="font-size: 32px; margin-bottom: 15px;">MK FITNESS <br>TEAM</h3>
+                        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 30px; flex-grow: 1;">
+                            Our floor trainers and assistant coaches are always on hand to spot you, correct your form,
+                            and push your limits.
+                        </p>
+                        <a href="contact.html" class="btn btn-outline"
+                            style="width: 100%; padding: 12px; font-size: 14px;">GENERAL ENQUIRY</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                ... (Footer content to be linked via external component in a real app, keeping hardcoded for static
+                constraint) ...
+                <div class="footer-brand">
+                    <h3 style="font-weight: 900;"><i class="fas fa-dumbbell text-orange"></i> MUSCLE FLEX</h3>
+                    <p>Also known as MK Fitness. Founded by Kamran Khan and Tanweer Alam from Kamarhati.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MUSCLE FLEX / MK Fitness.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/917980581070" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
